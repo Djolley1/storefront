@@ -1,12 +1,12 @@
-import React from 'react';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Categories from './components/Categories';
 import Products from './components/Products';
+import SimpleCart from './components/SimpleCart';
 import { Container } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { setActiveCategory, filterProductsByCategory } from './components/Store/actions';
-import './App.css';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -19,6 +19,7 @@ const App = () => {
   return (
     <Container className="container">
       <Header handleCategoryClick={handleCategoryClick} />
+      <SimpleCart />
       <Categories handleCategoryClick={handleCategoryClick} />
       <Products />
       <Footer />
